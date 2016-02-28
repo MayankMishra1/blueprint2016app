@@ -1,2 +1,1 @@
-Our Blueprint 2016 App thing
-
+An app that syncs with Google Calendar to determine the best time to meet with friends.
