@@ -1,18 +1,184 @@
-<html>
+<!-- <html>
   <head>
-    <script src="getcalendar.js">
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
-    </script>
+    <link href="style.css" rel="stylesheet" text="text/css"/>
+    <link rel="stylesheet" type="text/css" href="app/dist/semantic.min.css">
+    <script src="app/dist/semantic.min.js"></script>
+    <script src="assets/library/jquery.min.js"></script>
   </head>
   <body>
     <div id="authorize-div" style="display: none">
       <span>Authorize access to Google Calendar API</span>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" onclick="handleAuthClick(event)">
+      <!--Button for the user to click to initiate auth sequence
+      <button id="authorize-button" onClick=alert("yay")>
         Authorize
       </button>
     </div>
     <pre id="output"></pre>
+  </body>
+</html>
+ -->
+
+ <html>
+  <head>
+    <title>Hangout</title>
+    <link href="style.css" rel="stylesheet" text="text/css"/>
+    <link rel="stylesheet" type="text/css" href="app/dist/semantic.min.css">
+    <script src="app/dist/semantic.min.js"></script>
+    <script src="assets/library/jquery.min.js"></script>
+    <script src="assets/library/calendar.js"></script>
+  <body>
+
+<div class="ui equal width center aligned padded grid" style="padding-top: 10px;padding-right: 10px;padding-left: 10px;">
+  <div class="row" style="background-color: #1B1C1D;color: #FFFFFF;">
+    <div class="column"> Month, Year </div>
+  </div>
+  <div class="row" style="height: qwA">
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Sunday
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Monday
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Tuesday
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Wednesday
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Thursday
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Friday
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Saturday
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day1
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day2
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day3
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day4
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day5
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day6
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day7
+    </div>
+  </div>
+
+<div class="row">
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day8
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day9
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day10
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day11
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day12
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day13
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day14
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day15
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day16
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day17
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day18
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day19
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day20
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day21
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day22
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day23
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day24
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day25
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day26
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day27
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Day28
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Overflow1
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Overflow2
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Overflow3
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Overflow4
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Overflow5
+    </div>
+    <div class="column" style="background-color: #FFFFFF;color: #1B1C1D;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Overflow6
+    </div>
+    <div class="column" style="background-color: #1B1C1D;color: #FFFFFF;margin-top: -1rem;margin-bottom: -1rem;padding-top: 1rem;padding-bottom: 1rem;">
+      Overflow7
+    </div>
+  </div>
+
+</div>
+
+<button class="ui button"  onClick=alert("Pressed") style="height: 80px;width: 150px;">Button</button>
+
   </body>
 </html>
