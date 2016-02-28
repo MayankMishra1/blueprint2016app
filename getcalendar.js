@@ -75,7 +75,6 @@
         var run = true;
         if (events.length > 0) {
           var str = 'https://flickering-inferno-2070.firebaseio.com/users/' + events[0].creator.email.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '');
-          console.log(str);
           var firebase = new Firebase(str);
           for (i = 0; i < events.length; i++) {
             var event = events[i];
@@ -84,8 +83,8 @@
               when = event.start.date;
             }
             var entry = {
-                id: when,
-                time: event.end.dateTime
+                start: when,
+                end: event.end.dateTime
             };
             firebase.push(entry);
           }
