@@ -66,12 +66,13 @@
         'timeMin': (new Date()).toISOString(),
         'showDeleted': false,
         'singleEvents': true,
-        'maxResults': 10,
+        'maxResults': 100,
         'orderBy': 'startTime'
       });
 
       request.execute(function(resp) {
         var events = resp.items;
+        var run = true;
         if (events.length > 0) {
           var str = 'https://flickering-inferno-2070.firebaseio.com/users/' + events[0].creator.email.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '');
           console.log(str);
@@ -83,14 +84,17 @@
               when = event.start.date;
             }
             var entry = {
-                id: event.creator.email,
-                time: when
+                id: when,
+                time: event.end.dateTime
             };
             firebase.push(entry);
           }
-        } else {
-          alert('No upcoming events found.');
         }
+        else {
+          alert('No upcoming events found.');
+          run = false;
+        }
+        if(run) alert("Thanks for connecting!")
 
       });
     }

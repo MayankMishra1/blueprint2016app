@@ -6,16 +6,46 @@
     <script src="dist/semantic.min.js"></script>
     <script src="assets/library/jquery.min.js"></script>
     <script src="assets/library/calendar.js"></script>
-    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'>
+      
+    </script>
 
     <script>
       var a = 'Available'
       var u = 'Unavailble'
 
     </script>
+ <title>Recess</title>
+  <link rel="stylesheet" type="text/css" href="dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/menu.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/input.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
 
     <style>
-
+    .ui.large.secondary.inverted.pointing.menu {
+      width:100%;
+      padding-bottom: 5px;
+      background-color: #1b1c1d;
+      position: fixed;
+      z-index: 100;
+      left:0;
+      top:0 !important;
+      padding-left: 25px;
+    }
       #datetime {
         background-color: #1B1C1D;
         color: #FFF;
@@ -30,12 +60,45 @@
       #av {
         text-align: center;
       }
+      .total{
+        margin-top: 6em;
 
+        margin-bottom: 6em;
+      }
+      body{
+        background:#e67e22;
+      }
+
+    .ui.text.container{
+      padding-top: 100px;
+      text-align: center;
+          }
     </style>
 
   </head>
   <body>
-  <div style="padding-top: 10px;padding-right: 10px;padding-left: 10px;">
+      <div class="ui container">
+      <div class="sexyScrollingHeader">
+       <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a class="active item" href="date.html">Calender</a>
+        <a class="item">Bored</a>
+        <a class="item" href="GroupCreation.html"> + New Group</a>
+          <div class="right item">
+          Hello there, User!
+            <a class="ui inverted button">Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui text container">
+        <h1 class="ui inverted header">
+          Calender  
+        </h1>
+      </div>
+  <div class="total" style="padding-top: 10px;padding-right: 10px;padding-left: 10px;">
     <table class="ui celled structured unstackable table">
     <thead>
       <tr>
