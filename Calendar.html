@@ -1,15 +1,14 @@
 <html>
   <head>
-    <script src="getcalendar.js">
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
-    </script>
+    <script src="getcalendartest.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
   </head>
-  <body>
-    <div id="authorize-div" style="display: none">
+  <body bgcolor="#1B1C1D">
+    <div id="authorize-div" style="padding-top: 100px">
       <!--Button for the user to click to initiate auth sequence -->
       <center>
-        <button class="ui button"  onClick="handleAuthClick(event)" style="height: 80px;width: 250px;">
+        <button class="ui_button"  onClick="handleAuthClick(event)" style="height: 80px;width: 250px;">
           Connect to Google Calendar
         </button>
       </center>
