@@ -16,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="dist/components/header.css">
   <link rel="stylesheet" type="text/css" href="dist/components/image.css">
   <link rel="stylesheet" type="text/css" href="dist/components/menu.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/input.css">
 
   <link rel="stylesheet" type="text/css" href="dist/components/divider.css">
   <link rel="stylesheet" type="text/css" href="dist/components/dropdown.css">
@@ -27,7 +28,7 @@
   <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
 
   <style type="text/css">
-
+  
     .hidden.menu {
       display: none;
     }
@@ -43,7 +44,7 @@
       margin-left: 0.5em;
     }
     .masthead h1.ui.header {
-      margin-top: 3em;
+      margin-top: 1em;
       margin-bottom: 0em;
       font-size: 4em;
       font-weight: normal;
@@ -77,12 +78,12 @@
       padding: 0em;
     }
     .quote.stripe.segment .grid .column {
-      padding-top: 5em;
-      padding-bottom: 5em;
+      padding-top: 0em;
+      padding-bottom: 0em;
     }
 
     .footer.segment {
-      padding: 5em 0em;
+      padding:0em 0em;
     }
 
     .secondary.pointing.menu .toc.item {
@@ -125,9 +126,22 @@
 
     }
 
-    .sexyScrollingHeader {
-
+    .anotherOne{
+      background-color: #e74c3c;
+      height:700px;
     }
+    body{
+      background-color: #e74c3c;
+    }
+
+    .ui.input.focus{
+      padding-top: 100px;
+    }
+    .ui.text.container{
+      padding-top: 50px;
+    }
+
+
 
 
 
@@ -174,74 +188,34 @@
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">Home</a>
-        <a class="item" >What is Recess?</a>
-        <a class="item">About Us</a>
+        <a class="item">Calender</a>
+        <a class="item">Groups</a>
+        <a class="active item" > + New Group</a>
           <div class="right item">
-           <a href="Login.html" class="ui inverted button">Log in</a>
-            <a href="Calendar.html" class="ui inverted button">Connect</a>
+          Hello there, User!
+            <a class="ui inverted button">Sign Out</a>
           </div>
         </div>
       </div>
     </div>
 
+<div class="anotherOne">
+
     <div class="ui text container">
       <h1 class="ui inverted header">
-        RECESS
+      Group      
       </h1>
-      <h2>ORGANIZE YOUR FREE TIME</h2>
-      <div class="ui huge primary button">Get Started<i class="right arrow icon"></i></div>
+      <h2>Form different groups of people which you want to meet at different times.</h2>
     </div>
-
+  <div class="ui input focus">
+  <input type="text" placeholder="Group Title">
+  
   </div>
 
-  <div class="ui vertical stripe segment">
-    <div class="ui middle aligned stackable grid container">
-      <div class="row">
-        <div class="eight wide column">
-          <h3 class="ui header">We redesigned how to hang out.</h3>
-          <p>Dentist, office meeting, schoolwork, dinner. . .<br> There are so many things competeing for our attention in our live. However we still need to organize meetings, gatherings and simple hangout time with our friends. Recess takes away the hastle of polls, infinitly long email chains, and even wasted air around the water cooler.</p>
-          <h3 class="ui header">Form and customize groups.</h3>
-          <p>You dont want to hang out with your boss on the weekends. And you really dont want your child's birthday party to coincide with your workday. With recess, each group can optimze their pr3eferences fordifferent groups, so you can get the best times to meet your friends for go carting, as well as nail that buisness presentaion, without a sweat.</p>
-        </div>
-        <div class="six wide right floated column">
-          <img src="friends.jpeg" class="ui large bordered rounded image">
-        </div>
-      </div>
-    </div>
+      <a href="AddPeople.html" class="ui inverted button">Create Group!</a>
   </div>
 
-
-  <div class="ui vertical stripe quote segment">
-    <div class="ui equal width stackable internally celled grid">
-      <div class="center aligned row">
-        <div class="column">
-          <h3>"I love Recess"</h3>
-          <p> - Everyone</p>
-        </div>
-        <div class="column">
-          <h3>"We have seen nothing like it before, and it is going to revolutionize the way people hang out."</h3>
-          <p>
-            <img src="assets/images/avatar/nan.jpg" class="ui avatar image">  Super Reputable Company.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ui vertical stripe segment">
-    <div class="ui text container">
-      <h3 class="ui header">Lose the Load</h3>
-      <p>Let Recess take care of all of the heavfy lifting of organizing an event with it's handpicked dates and times for your next gathering. Free, lightweight, and totally nonagressive data techniques.</p>
-      <h4 class="ui horizontal header divider">
-        <a href="#">Guarantee</a>
-      </h4>
-      <h3 class="ui header">Did we tell you about our policy?</h3>
-      <p>In this trecherous world of data sharing and privacy infringement, we promise to every single one of our customers that not only are their events given complete privacy, we swear to never share their data with anyone, anywhere, for any reason!</p>
-      <a class="ui large button">Sign Up Now!</a>
-    </div>
-  </div>
-
+</div>
 
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
