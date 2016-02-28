@@ -8,8 +8,6 @@
      * Check if current user has authorized this application.
      */
 
-    var firebase = new Firebase('https://flickering-inferno-2070.firebaseio.com/');
-
     function checkAuth() {
       gapi.auth.authorize(
         {
@@ -74,14 +72,13 @@
 
       request.execute(function(resp) {
         var events = resp.items;
-
         if (events.length > 0) {
-            console.log('execute');
+          var str = 'https://flickering-inferno-2070.firebaseio.com/users/' + events[0].creator.email.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '');
+          console.log(str);
+          var firebase = new Firebase(str);
           for (i = 0; i < events.length; i++) {
             var event = events[i];
-            console.log('execute[]')
             var when = event.start.dateTime;
-            console.log(event.creator.email)
             if (!when) {
               when = event.start.date;
             }
@@ -92,20 +89,8 @@
             firebase.push(entry);
           }
         } else {
-          appendPre('No upcoming events found.');
+          alert('No upcoming events found.');
         }
 
       });
-    }
-
-    /**
-     * Append a pre element to the body containing the given message
-     * as its text node.
-     *
-     * @param {string} message Text to be placed in pre element.
-     */
-    function appendPre(message) {
-      var pre = document.getElementById('output');
-      var textContent = document.createTextNode(message + '\n');
-      pre.appendChild(textContent);
     }
